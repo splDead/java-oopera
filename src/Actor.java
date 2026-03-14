@@ -28,8 +28,8 @@ public class Actor extends Person {
 
     @Override
     public String toString() {
-        return "Actor{name='" + getName() + '\'' +
-                ", surname='" + getSurname() + '\'' +
+        return "Actor{name='" + name + '\'' +
+                ", surname='" + surname + '\'' +
                 " (" + height + ')' +
                 '}';
     }

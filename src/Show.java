@@ -1,20 +1,16 @@
 import java.util.ArrayList;
 
 public class Show {
-    private String title;
-    private int duration;
-    private Director director;
-    private ArrayList<Actor> listOfActors;
+    protected String title;
+    protected int duration;
+    protected Director director;
+    protected ArrayList<Actor> listOfActors;
 
     public Show(String title, int duration, Director director, ArrayList<Actor> listOfActors) {
         this.title = title;
         this.duration = duration;
         this.director = director;
         this.listOfActors = listOfActors;
-    }
-
-    public String getTitle() {
-        return title;
     }
 
     public void printActors() {
@@ -30,8 +26,8 @@ public class Show {
         }
 
         listOfActors.add(actor);
-        System.out.println("Актёр " + actor.getName() + " " + actor.getSurname() +
-                " добавлен в список участников спектакля " + getTitle() + ".");
+        System.out.println("Актёр " + actor.name + " " + actor.surname +
+                " добавлен в список участников спектакля " + title + ".");
     }
 
     public void replaceActor(Actor actor, String actorSurnameForReplace) {
@@ -44,12 +40,12 @@ public class Show {
 
         listOfActors.remove(replancedActor);
         listOfActors.add(actor);
-        System.out.println("Актёр по фамилии " + actorSurnameForReplace + " заменён на " + actor.getSurname());
+        System.out.println("Актёр по фамилии " + actorSurnameForReplace + " заменён на " + actor.surname);
     }
 
     private Actor findActorBySurname(String surname) {
         for (Actor actor : listOfActors) {
-            if (actor.getSurname().equals(surname)) {
+            if (actor.surname.equals(surname)) {
                 return actor;
             }
         }

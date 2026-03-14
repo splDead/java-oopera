@@ -34,32 +34,32 @@ public class Theatre {
                 "Звуки вокализирующего хора", choreographer);
 
         // 3. Распределение актёров
-        System.out.println("Добавляем участников спектакля " + show.getTitle());
+        System.out.println("Добавляем участников спектакля " + show.title);
         show.addActor(actor1);
         show.addActor(actor2);
         show.addActor(actor3);
         System.out.println();
 
-        System.out.println("Добавляем участников оперы " + opera.getTitle());
+        System.out.println("Добавляем участников оперы " + opera.title);
         opera.addActor(actor2);
         opera.addActor(actor3);
         System.out.println();
 
-        System.out.println("Добавляем участников балета " + ballet.getTitle());
+        System.out.println("Добавляем участников балета " + ballet.title);
         ballet.addActor(actor1);
         ballet.addActor(actor3);
         System.out.println();
 
         // 4. Вывод списков актёров
-        System.out.println("Список актёров спектакля: " + show.getTitle());
+        System.out.println("Список актёров спектакля: " + show.title);
         show.printActors();
         System.out.println();
 
-        System.out.println("Список актёров оперы: " + opera.getTitle());
+        System.out.println("Список актёров оперы: " + opera.title);
         opera.printActors();
         System.out.println();
 
-        System.out.println("Список актёров балета: " + ballet.getTitle());
+        System.out.println("Список актёров балета: " + ballet.title);
         ballet.printActors();
         System.out.println();
 
@@ -74,11 +74,11 @@ public class Theatre {
         System.out.println();
 
         // 7. Вывод либретто
-        System.out.println("Текст либретто для " + opera.getTitle());
+        System.out.println("Текст либретто для " + opera.title);
         opera.printLibretto();
         System.out.println();
 
-        System.out.println("Текст либретто для " + ballet.getTitle());
+        System.out.println("Текст либретто для " + ballet.title);
         ballet.printLibretto();
     }
 }
